@@ -121,10 +121,89 @@ For cross-cutting risks (security, performance, availability):
 
 ## Validation
 
-Before completing any operation, run checks from `references/validation-rules.md`:
+Before completing any operation, run validation checks:
 
+### Automated Validation Scripts
+
+Use provided scripts for comprehensive validation:
+
+```bash
+# Full validation (recommended)
+python scripts/validate_knowledge.py
+
+# Check bidirectional links only
+python scripts/check_links.py
+```
+
+**When to validate:**
+- After adding new domain
+- After recording incident
+- After updating risks
+- Before committing changes
+
+**Validation checks:**
 - **Block**: Duplicate domain/keyword, broken file paths, missing required fields
 - **Warn**: Similar keywords, duplicate risk patterns, missing incident links
+
+See `references/validation-rules.md` for detailed rules.
+
+## Scripts
+
+Three utility scripts are provided in `scripts/` directory:
+
+### validate_knowledge.py
+Comprehensive validation of entire knowledge base.
+
+**Checks:**
+- YAML syntax in knowledge-map.yml
+- File path existence
+- Required fields in all documents
+- Duplicate domains and keywords
+- Bidirectional link consistency
+
+**Usage:**
+```bash
+python scripts/validate_knowledge.py [repo_path]
+```
+
+**When to use:** After any modification to verify integrity.
+
+### check_links.py
+Focused link validation between incidents and risks.
+
+**Checks:**
+- Incident → Risk references
+- Risk → Incident references
+- Knowledge-map.yml file references
+- Broken file links
+
+**Usage:**
+```bash
+python scripts/check_links.py [repo_path]
+```
+
+**When to use:** When adding/updating cross-references.
+
+### add_domain.py
+Interactive domain creation wizard.
+
+**Features:**
+- Validates domain uniqueness
+- Creates spec.md and risks.md from templates
+- Updates knowledge-map.yml automatically
+- Guides keyword and common risk selection
+
+**Usage:**
+```bash
+python scripts/add_domain.py [repo_path]
+```
+
+**When to use:** When adding new domain (alternative to manual workflow).
+
+**Note:** Scripts require PyYAML. Install with:
+```bash
+pip install -r scripts/requirements.txt
+```
 
 ## References
 
