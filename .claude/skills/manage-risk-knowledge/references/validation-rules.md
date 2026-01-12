@@ -18,9 +18,9 @@ Apply these checks when adding or updating knowledge files.
 - All `Related Risks` references in incidents/ must exist
 
 ### Required Fields
-- spec.md: Must have `## Overview` and `## Core Components`
-- risks.md: Each risk must have `**Details**` and `**Countermeasures**`
-- incidents/: Must have `## Summary`, `## Root Cause`, `## Related Risks`
+- spec.md: Must have `## 概要` and `## コアコンポーネント`
+- risks.md: Each risk must have `**詳細**` and `**対策**`
+- incidents/: Must have `## サマリー`, `## 根本原因`, `## 関連リスク`
 
 ## Warning Checks (Prompt user for confirmation)
 

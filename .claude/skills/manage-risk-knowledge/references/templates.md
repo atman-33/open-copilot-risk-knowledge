@@ -5,98 +5,98 @@ Use these templates when creating new files. Follow the structure exactly.
 ## spec.md Template
 
 ```markdown
-# [Domain Name] Domain Specification
+# [ドメイン名]ドメイン仕様
 
-## Overview
+## 概要
 
-[1-2 sentences describing this domain's purpose and scope]
+[このドメインの目的とスコープを1-2文で記述]
 
-## Core Components
+## コアコンポーネント
 
-### 1. [Component Name]
+### 1. [コンポーネント名]
 
-- [Key point about the component]
-- [Another key point]
+- [コンポーネントに関する重要なポイント]
+- [別の重要なポイント]
 
-### 2. [Component Name]
+### 2. [コンポーネント名]
 
-- [Key point about the component]
+- [コンポーネントに関する重要なポイント]
 
-## API Endpoints
+## APIエンドポイント
 
-| Endpoint | Method | Description |
+| エンドポイント | メソッド | 説明 |
 |----------|--------|-------------|
 | /api/... | POST | ... |
 | /api/... | GET | ... |
 
-## Dependencies
+## 依存関係
 
-- [External service or system]
-- [Database or storage]
+- [外部サービスまたはシステム]
+- [データベースまたはストレージ]
 ```
 
 ## risks.md Template
 
 ```markdown
-# [Domain Name] Domain Risks
+# [ドメイン名]ドメインのリスク
 
-Risks specific to the [domain name] system's architecture and implementation.
+[ドメイン名]システムのアーキテクチャと実装に固有のリスク。
 
-## 1. [Risk Name]
+## 1. [リスク名]
 
-- **Details**: [What can go wrong and why]
-- **Countermeasures**:
-  - [Mitigation step 1]
-  - [Mitigation step 2]
-- **Severity**: [Critical/High/Medium/Low]
-- **Related Incident**: `incidents/YYYY-incident-name.md` (if applicable)
+- **詳細**: [何が問題になるか、なぜ発生するか]
+- **対策**:
+  - [対策手順1]
+  - [対策手順2]
+- **重要度**: [重大/高/中/低]
+- **関連インシデント**: `incidents/YYYY-incident-name.md` (該当する場合)
 
-## 2. [Risk Name]
+## 2. [リスク名]
 
-- **Details**: [What can go wrong and why]
-- **Countermeasures**:
-  - [Mitigation step 1]
-- **Severity**: [Critical/High/Medium/Low]
+- **詳細**: [何が問題になるか、なぜ発生するか]
+- **対策**:
+  - [対策手順1]
+- **重要度**: [重大/高/中/低]
 ```
 
 ## incidents/ File Template
 
 ```markdown
-# Incident: [Short Descriptive Title]
+# インシデント: [短い説明的なタイトル]
 
-## Summary
+## サマリー
 
-- **Date**: YYYY-MM-DD
-- **Duration**: X hours (HH:MM - HH:MM TZ)
-- **Severity**: [Critical/High/Medium/Low]
-- **Affected Users**: [Number or percentage]
+- **日時**: YYYY-MM-DD
+- **継続時間**: X時間（HH:MM - HH:MM TZ）
+- **重要度**: [重大/高/中/低]
+- **影響を受けたユーザー**: [数または割合]
 
-## Incident Description
+## インシデント説明
 
-[2-3 sentences describing what happened from user perspective]
+[ユーザー視点で何が起こったかを2-3文で記述]
 
-## Root Cause
+## 根本原因
 
-[Technical explanation of why this happened]
+[なぜこれが発生したかの技術的説明]
 
-## Timeline
+## タイムライン
 
-| Time | Event |
+| 時刻 | イベント |
 |------|-------|
-| HH:MM | [Event description] |
-| HH:MM | [Event description] |
+| HH:MM | [イベントの説明] |
+| HH:MM | [イベントの説明] |
 
-## Impact
+## 影響
 
-- [Business impact 1]
-- [Business impact 2]
+- [ビジネス影響1]
+- [ビジネス影響2]
 
-## Lessons Learned
+## 学んだ教訓
 
-1. [Key takeaway 1]
-2. [Key takeaway 2]
+1. [重要なポイント1]
+2. [重要なポイント2]
 
-## Related Risks
+## 関連リスク
 
 - `domains/[domain]/risks.md` - [Risk name]
 - `common-risks/[category].md` - [Risk name]
