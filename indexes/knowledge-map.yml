@@ -1,58 +1,17 @@
 # Copilot Knowledge Map
-# ユーザーの入力内容に基づき、参照すべきナレッジファイルを定義します。
+# Define keyword-based routing for domains
 
-definitions:
-  - domain_name: "認証・ログイン (Auth)"
-    description: "ログイン、ログアウト、セッション管理、パスワード処理に関する機能"
-    keywords:
-      - "ログイン"
-      - "認証"
-      - "セッション"
-      - "トークン"
-      - "クッキー"
-      - "パスワード"
-      - "ログアウト"
-    related_files:
-      common_risks:
-        - "common-risks/availability.md"  # ログイン不可は可用性リスク
-        - "common-risks/security.md"      # 認証周りはセキュリティリスクが高い
-      domain_knowledge:
-        - "domains/auth/spec.md"
-        - "domains/auth/risks.md"
+definitions: []
 
-  - domain_name: "決済 (Payment)"
-    description: "クレジットカード決済、銀行振込、電子マネー等の決済処理に関する機能"
-    keywords:
-      - "決済"
-      - "支払い"
-      - "チェックアウト"
-      - "クレジット"
-      - "クレジットカード"
-      - "トランザクション"
-      - "払い戻し"
-      - "返金"
-    related_files:
-      common_risks:
-        - "common-risks/security.md"      # 決済情報はセキュリティリスクが最高レベル
-        - "common-risks/availability.md"  # 決済不可は売上直結
-      domain_knowledge:
-        - "domains/payment/spec.md"
-        - "domains/payment/risks.md"
-
-  - domain_name: "バッチ処理・データ操作 (Batch)"
-    description: "非同期処理、CSVインポート/エクスポート、夜間バッチ"
-    keywords:
-      - "バッチ"
-      - "バッチ処理"
-      - "ジョブ"
-      - "インポート"
-      - "エクスポート"
-      - "一括"
-      - "大量"
-      - "非同期"
-    related_files:
-      common_risks:
-        - "common-risks/performance.md"   # 大量データによる遅延・サーバーダウン
-      domain_knowledge:
-        - "domains/batch-processing/spec.md"
-        - "domains/batch-processing/risks.md"
+# Example entry:
+# - domain_name: "Your Domain Name"
+#   description: "Brief description"
+#   keywords:
+#     - "keyword1"
+#     - "keyword2"
+#   related_files:
+#     common_risks:
+#       - "common-risks/security.md"
+#     domain_knowledge:
+#       - "domains/your-domain/spec.md"
+#       - "domains/your-domain/risks.md"

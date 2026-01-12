@@ -21,167 +21,113 @@ import yaml
 
 
 COMMON_RISKS_TEMPLATES = {
-    "security.md": """# Security Risks
+    "security.md": """# セキュリティリスク
 
-Cross-cutting security risk patterns applicable to all domains.
+すべての機能で発生する可能性のある一般的なセキュリティリスク。
 
-## 1. SQL Injection
+## 1. SQLインジェクション
 
-**Risk**:
-(Add description here)
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 
-**Causes**:
-- (Add causes here)
+## 2. クロスサイトスクリプティング（XSS）
 
-**Severity**: 
-(Critical/High/Medium/Low)
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 
----
+## 3. 情報開示
 
-## 2. Cross-Site Scripting (XSS)
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 
-**Risk**:
-(Add description here)
+## 4. 認証バイパス
 
-**Causes**:
-- (Add causes here)
-
-**Severity**: 
-(Critical/High/Medium/Low)
-
----
-
-## 3. Information Disclosure
-
-**Risk**:
-(Add description here)
-
-**Causes**:
-- (Add causes here)
-
-**Severity**: 
-(Critical/High/Medium/Low)
-
----
-
-## (Add More Risks)
-
-**Risk**:
-(Add description here)
-
-**Causes**:
-- (Add causes here)
-
-**Severity**: 
-(Critical/High/Medium/Low)
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 """,
-    "performance.md": """# Performance Risks
+    "performance.md": """# パフォーマンスリスク
 
-Cross-cutting performance degradation patterns.
+すべての機能で発生する可能性のあるパフォーマンス低下パターン。
 
-## 1. N+1 Query Problem
+## 1. N+1クエリ問題
 
-**Risk**:
-(Add description here)
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 
-**Causes**:
-- (Add causes here)
+## 2. メモリリーク
 
-**Severity**: 
-(Critical/High/Medium/Low)
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 
----
+## 3. コネクション枯渇
 
-## 2. Memory Leak
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 
-**Risk**:
-(Add description here)
+## 4. 大量データ処理の遅延
 
-**Causes**:
-- (Add causes here)
-
-**Severity**: 
-(Critical/High/Medium/Low)
-
----
-
-## 3. Connection Exhaustion
-
-**Risk**:
-(Add description here)
-
-**Causes**:
-- (Add causes here)
-
-**Severity**: 
-(Critical/High/Medium/Low)
-
----
-
-## (Add More Risks)
-
-**Risk**:
-(Add description here)
-
-**Causes**:
-- (Add causes here)
-
-**Severity**: 
-(Critical/High/Medium/Low)
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 """,
-    "availability.md": """# Availability Risks
+    "availability.md": """# 可用性リスク
 
-Cross-cutting service availability and outage patterns.
+すべての機能で発生する可能性のあるサービス停止・可用性に関するリスク。
 
-## 1. Service Outage
+## 1. サービス停止
 
-**Risk**:
-(Add description here)
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 
-**Causes**:
-- (Add causes here)
+## 2. ログイン障害
 
-**Severity**: 
-(Critical/High/Medium/Low)
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 
----
+## 3. データベース接続障害
 
-## 2. Login Failure
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 
-**Risk**:
-(Add description here)
+## 4. タイムアウト・レスポンス遅延
 
-**Causes**:
-- (Add causes here)
-
-**Severity**: 
-(Critical/High/Medium/Low)
-
----
-
-## 3. Database Connection Failure
-
-**Risk**:
-(Add description here)
-
-**Causes**:
-- (Add causes here)
-
-**Severity**: 
-(Critical/High/Medium/Low)
-
----
-
-## (Add More Risks)
-
-**Risk**:
-(Add description here)
-
-**Causes**:
-- (Add causes here)
-
-**Severity**: 
-(Critical/High/Medium/Low)
+- **リスク**: （ここに説明を記載）
+- **原因**:
+  - （原因1を記載）
+  - （原因2を記載）
+- **重要度**: （重大/高/中/低）
 """
 }
 
