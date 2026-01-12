@@ -92,6 +92,32 @@ Cross-cutting risk patterns applicable to all domains:
 - **performance.md**: N+1 queries, memory leaks, connection exhaustion
 - **availability.md**: Service outages, login failures
 
+## Getting Started
+
+### Initial Setup (New Project)
+
+If this is your first time using this repository for a new project:
+
+1. **Initialize the repository** to remove sample data:
+   ```bash
+   python3 .claude/skills/init-risk-knowledge/scripts/init_repository.py
+   ```
+   
+   This will:
+   - Move sample domains, incidents to `.examples/` for reference
+   - Create clean working structure
+   - Template common-risks files
+   - Reset knowledge-map.yml
+
+2. **Add your first domain**:
+   ```bash
+   python3 .claude/skills/manage-risk-knowledge/scripts/add_domain.py
+   ```
+
+3. **Customize common risks** for your project's needs
+
+See `.claude/skills/init-risk-knowledge/SKILL.md` for detailed initialization guide.
+
 ## Usage
 
 ### For Developers
@@ -104,9 +130,9 @@ When starting a new feature or refactoring existing code:
    ```
 
 2. **Receive risk assessment** based on:
-   - Past incidents (e.g., `2023-login-failure.md`)
-   - Domain-specific risks (e.g., `auth/risks.md`)
-   - Common security patterns (e.g., `security.md`)
+   - Past incidents (e.g., from `incidents/`)
+   - Domain-specific risks (e.g., from `domains/*/risks.md`)
+   - Common security patterns (e.g., from `common-risks/`)
 
 3. **Review recommendations** and apply countermeasures proactively
 
@@ -142,9 +168,36 @@ Or manually:
 
 ## Scripts
 
+### Repository Initialization
+
+#### init_repository.py
+
+One-time script to prepare repository for a new project.
+
+```bash
+python3 .claude/skills/init-risk-knowledge/scripts/init_repository.py
+```
+
+**Features:**
+- Archives sample data to `.examples/`
+- Cleans domains and incidents directories
+- Templates common-risks files
+- Resets knowledge-map.yml
+- Prevents accidental re-runs
+
+**Options:**
+```bash
+--dry-run    # Preview changes without modifying files
+--force      # Skip confirmation prompt
+```
+
+See `.claude/skills/init-risk-knowledge/SKILL.md` for details.
+
+### Knowledge Base Management
+
 The repository includes validation and utility scripts in `.claude/skills/manage-risk-knowledge/scripts/`:
 
-### validate_knowledge.py
+#### validate_knowledge.py
 
 Comprehensive validation of the entire knowledge base.
 
@@ -218,13 +271,24 @@ The `.github/copilot-instructions.md` file configures Copilot to act as a **Risk
 
 ### Claude Skill Integration
 
-The `.claude/skills/manage-risk-knowledge/` skill enables AI assistants to:
+Two skills are provided for repository management:
 
-- Maintain the knowledge base structure
-- Add new domains systematically
-- Record incidents with proper linking
-- Validate data integrity
-- Update risk catalogs
+#### init-risk-knowledge
+
+Located in `.claude/skills/init-risk-knowledge/`, this skill:
+- Initializes repository for new projects
+- Archives sample data to `.examples/`
+- Creates clean working structure
+- One-time operation with safety checks
+
+#### manage-risk-knowledge
+
+Located in `.claude/skills/manage-risk-knowledge/`, this skill enables:
+- Maintaining the knowledge base structure
+- Adding new domains systematically
+- Recording incidents with proper linking
+- Validating data integrity
+- Updating risk catalogs
 
 ## Validation Rules
 
